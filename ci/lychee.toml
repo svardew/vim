@@ -38,6 +38,42 @@ exclude = [
   '^https://github\.com/you/foobar\.git$',
   '^https?://flatassembler\.net',
   '^https?://www\.fleiner\.com/vim/download.html',
+
+  # Errors in \./lang/README\.zh_cn\.txt
+  # CJK comma/preiod treat as url string\.
+  '^https?://github\.com/vim/vim%E3%80%82',
+  '^https?://github\.com/vim/vim-win32-installer/releases%E3%80%82',
+  '^https?://github\.com/vim/vim/tags%E3%80%82',
+  # Errors in \./README\.md
+  # 403 auth
+  '^https?://reddit\.com/r/vim',
+  # Errors in \./runtime/doc/mbyte\.txt
+  # FIXME find valid scim project site
+  '^https?://www\.freedesktop\.org/wiki/Software/scim/',
+  # Errors in \./runtime/doc/netbeans\.txt
+  # FIXME find valid url on pida\.co\.uk
+  # FIXME find valid site for a-a-p\.org (project alive?)
+  '^https?://pida\.co\.uk/',
+  '^https?://www\.a-a-p\.org/',
+  # Errors in \./runtime/doc/vi_diff\.txt
+  # FIXME find mail archive and what is written
+  '^https?://www\.opengroup\.org/sophocles/show_mail\.tpl\?CALLER=show_archive\.tpl&source=L&listname=austin-review-l&id=1711',
+  # Errors in \./runtime/spell/README\.txt
+  # FIXME find valid site for a-a-p\.org (project alive?)
+  '^https?://www\.a-a-p\.org/download\.html',
+  # Errors in \./runtime/spell/README_en\.txt
+  # 410 gone for app\.asspell\.net, find suitable url
+  # FIXME find wordlist-devel project site
+  '^https?://app\.aspell\.net/lookup',
+  '^https?://lists\.sourceforge\.net/lists/listinfo/wordlist-devel',
+  # Errors in \./src/INSTALLpc\.txt
+  # FIXME 404 www\.upx\.org, find current project site (project alive?)
+  '^https?://www\.upx\.org/',
+
+
+
+
+
 ]
 
 # Lychee only reads UTF-8 files
