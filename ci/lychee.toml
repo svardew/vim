@@ -13,7 +13,7 @@ extensions = ["c", "h", "md", "html", "txt"]
 accept = ["100..=103", "200..=299", "429"]
 
 # Retry each request a few times on transient network errors
-retries = 2
+max_retries = 2
 retry_wait_time = 2
 
 # Timeout per request in seconds
@@ -69,11 +69,6 @@ exclude = [
   # Errors in \./src/INSTALLpc\.txt
   # FIXME 404 www\.upx\.org, find current project site (project alive?)
   '^https?://www\.upx\.org/',
-
-
-
-
-
 ]
 
 # Lychee only reads UTF-8 files
