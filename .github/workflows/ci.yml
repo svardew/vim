@@ -93,7 +93,7 @@ jobs:
       - name: Use build_vim_on_linux
         uses: foxtrotperry/fetch-file-action@v0-alpha
         with:
-          url: 'https://github.com/vim/vim/blob/master/.github/actions/build_vim_on_linux/action.yml'
+          url: 'https://raw.githubusercontent.com/vim/vim/refs/heads/master/.github/actions/build_vim_on_linux/action.yml'
           path: '.github/actions/build_vim_on_linux'
           filename: 'action.yml'
 
