@@ -94,8 +94,11 @@ jobs:
         uses: foxtrotperry/fetch-file-action@v0-alpha
         with:
           url: 'https://github.com/vim/vim/blob/master/.github/actions/build_vim_on_linux/action.yml'
-          path: './.github/actions/build_vim_on_linux'
+          path: '.github/actions/build_vim_on_linux'
           filename: 'action.yml'
+
+      - name: cat build_vim_on_linux
+        run: cat .github/actions/build_vim_on_linux
 
       - name: Build
         timeout-minutes: 15
