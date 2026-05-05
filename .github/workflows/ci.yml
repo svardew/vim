@@ -98,7 +98,7 @@ jobs:
           filename: 'action.yml'
 
       - name: cat build_vim_on_linux
-        run: cat .github/actions/build_vim_on_linux
+        run: cat .github/actions/build_vim_on_linux/action.yml
 
       - name: Build
         timeout-minutes: 15
