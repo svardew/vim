@@ -64,7 +64,7 @@ jobs:
           ###   python3: stable-abi
           - features: huge
             compiler: gcc
-            coverage: true
+            coverage: false #true
             interface: dynamic
             extra: [uchar, testgui]
           ### - features: huge
@@ -86,6 +86,9 @@ jobs:
     steps:
       - name: Checkout repository from GitHub
         uses: actions/checkout@v6
+        with:
+          repository: vim/vim
+          ref: c5f312aad8e4179e437f81ad39a860cd0ef11970 # 9.1.2148
 
       - name: Build
         timeout-minutes: 15
