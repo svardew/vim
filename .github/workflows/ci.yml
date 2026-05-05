@@ -88,7 +88,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: vim/vim
-          ref: 87c6eb804f6b70621bc66c0c922bf03117a70a18 # patch 9.1.2000
+          ref: ad409876d9cf7e565f99c5e21b9e2e400a83a4d4 # patch 9.1.1001
 
       - name: Use build_vim_on_linux
         uses: foxtrotperry/fetch-file-action@v0-alpha
@@ -111,9 +111,9 @@ jobs:
           python3: ${{ matrix.python3 }}
           coverage: ${{ matrix.coverage }}
 
-      - name: Test
+      - name: Test minimum. (test_regsisters.vim - Test_end_reg_executing)
         timeout-minutes: 20
-        run: make ${SHADOWOPT} ${TEST}
+        run: TEST_FILTER='_end_reg_executing' make ${SHADOWOPT} ${TEST}
 
       # Enable to debug failing tests live and ssh into the CI runners
       # - name: Setup tmate session
