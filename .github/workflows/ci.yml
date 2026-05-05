@@ -90,6 +90,13 @@ jobs:
           repository: vim/vim
           ref: c5f312aad8e4179e437f81ad39a860cd0ef11970 # 9.1.2148
 
+      - name: Use build_vim_on_linux
+        uses: foxtrotperry/fetch-file-action@v0
+        with:
+          url: 'https://github.com/vim/vim/blob/master/.github/actions/build_vim_on_linux/action.yml'
+          path: './.github/actions/build_vim_on_linux'
+          filename: 'action.yml'
+
       - name: Build
         timeout-minutes: 15
         uses: ./.github/actions/build_vim_on_linux
